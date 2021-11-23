@@ -54,14 +54,12 @@ header{
 }
 
 footer{
-    margin-top:-1px;
-   
+    margin-bottom: 50px;
 }
 .boxInfo{
-    margin-top: 150px;
+    
 }
 .infoUser{
-    margin-top:100px;
     margin-left:-70px;
     padding:1em;
     display: flex;
