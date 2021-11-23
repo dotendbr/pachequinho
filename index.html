@@ -17,7 +17,7 @@
                 </div>  
             </div>
         </header>       
-        <iframe id="player" style="position: absolute; inset: -178.719px 0px 0px; width: 1366px; height: 768px;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player"src="https://www.youtube.com/embed/3t6Z0qRftQ0?autohide=1&autoplay=1&controls=0&enablejsapi=1&iv_load_policy=3&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&wmode=opaque&mute=1" class="background-video ready"></iframe>                  
+        <iframe id="player" style="position: absolute; inset: -178.719px 0px 0px;" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player"src="https://www.youtube.com/embed/3t6Z0qRftQ0?autohide=1&autoplay=1&controls=0&enablejsapi=1&iv_load_policy=3&loop=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&wmode=opaque&mute=1" class="background-video ready"></iframe>                  
         <footer>  
             <div class="boxInfo">
                 <div class="infoUser">
@@ -44,6 +44,11 @@
                     </div>
                 </div>
             </div>       
-        </footer>    
+        </footer>   
+   <script>
+        (() => { 
+        document.getElementById("player").style.width = `${window.innerWidth}px`;
+        document.getElementById("player").style.height = `${window.innerWidth *0.5622}px`;})()
+   </script>
     </body>
     </html>
