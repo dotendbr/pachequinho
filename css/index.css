@@ -7,137 +7,136 @@
 *{
     margin:0;
     padding:0;
-}
-html, body{
-    font-family:'Avenir', times, serif, sans-serif;
+    border:0;
+    outline:0;
+    box-sizing: border-box;
+    font-size:100%;
 }
 body{
-    background:#111;
-    overflow-x: hidden;
+    background-color: #111;
+    font-family:'Avenir', times, serif, sans-serif;
 }
-
-header{
-    z-index:1;
-    display:flex;
-    flex-direction: column;
-    align-items: center; 
-    z-index: 999;
-   
-}
-
 .title{
-    margin-top:50px;
+    z-index: 99999;
+    margin-bottom:150px;
+    margin-top:-25px;
 }
-
-.links{
-    z-index:99999;
-    margin-top:25px;
+.title > h1{
+    font-size: 40px;
+    color:white;
+}
+.embed{
+    position:relative;
+    width: 100%;
+    padding-bottom:56.25%; 
+    z-index: 1;  
+    margin-top:-100px;
+    z-index: 999;
+}
+.embed >div {
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    position: absolute;
+}
+.embed iframe {
     position:absolute;
+    width: 100%;
+    height: 100%;
+    border:none;
+    z-index: 1;
 }
 
-.look{
-    padding: 30px 40px 30px;
-    border:2px solid #111;
-    text-decoration: none;
-    color: #111;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    display: flex;
-    justify-content: center;
-    margin-top:30px;
-    font-size:22px;
-    text-transform: uppercase;
-}
-.look:hover{
-    background: #111;
-    color:#FFF;
-    cursor:pointer;
-}
-
-footer{
-    margin-bottom: 50px;
-}
-.boxInfo{
+.header{
     
 }
+
+.container{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    margin-top: 15%;
+    position: absolute;
+    width: 100%;
+}
+.boxHeader{
+    z-index: 9999;
+    border:2px solid rgb(255, 115, 0);
+    padding: 23px 0px 23px;
+    margin-bottom:20px; 
+    background-color: transparent;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.boxHeader:hover{
+    background-color:rgb(255, 115, 0)!important;
+    color:white;
+}
+.container > div > a{
+    padding: 26px;
+    color:rgb(255, 115, 0);
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+.container > div > a:hover{
+    color:white;
+}
+
+.footer{
+    justify-content: center;
+    display: flex;
+    margin-top: 265px;
+}
 .infoUser{
-    margin-left:-70px;
-    padding:1em;
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
-.infoUser > input, label{    
-    font-size:15px;
-    line-height: normal;
+.infoUser input{
+    padding: 15px 10px 15px;  
+    border-radius: 4px;
+    
 }
-.infoUser > input{
-    text-decoration:none;
-    border:none;
-    border-radius:1px;
-    padding: 15px;
-}
-.infoUser > label{
-    border:1px solid #FFF;
+.infoUser label {
+    display:flex;
+    align-items: center;
+    margin-left:10px;
+    border:2px solid white;
+    color:white;
+    padding: 10px 15px 10px;
     border-radius:2px;
-    background-color: rgb(0,0,0,0.1);
-    color:#FFF;
-    font-size:inherit;
-    padding:15px 50px 15px 50px;
-    margin-left:20px;
-    transition: background-color 0.5s ease, color 0.5s ease; 
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 .infoUser > label:hover{
     background-color: #FFF;
     color:black;
+    cursor: pointer;
+}
+.containerFooter{
+    justify-content:center;
+    display:flex;
+    margin-top: 20px;
+    margin-left: -200px;
 }
 .social{
+    flex-direction: row;
     display: flex;
-    justify-content: center;
-}
-.footerMusic{
-    display: flex;
-    justify-content: space-around;
-    width: 250px;
-    margin-left:-110px;
+    width: 40px;
+    padding:4px;
+    margin-left: -57px;
 }
 
-.container{
-    width: 50px;   
-}
-.container > a > img{
-    width: 100%;
-    margin-top: 10px;
+.boxSocial{
+    margin-top:10px;
 }
 .logos{
-    
-}
-.logoApple{
-    margin-left: 37px;
+    width: 40px;
+    margin: auto;
+    margin-right: 10px;
 }
 .logoDeezer{
-    width: 200%!important;
-    margin-top: 33px!important;
+    margin-top:20px;
+    width: 65px;
 }
-
-@media screen and (max-width: 768px) {
-
-    .infoUser {
-        flex-direction: column;
-        align-items: center;
-        margin-left:0px;
-    }
-    .infoUser > label {
-        margin-left:0px;
-        margin-top:10px;
-    }
-    .social{
-        margin-left:75px;
-    }
-    .look{
-        font-size:15px;
-        padding: 20px 25px 20px;
-    }
-    .header {
-        height: 110vh;
-    }
-
+.youtube{
+    margin-top:7px;  
 }
