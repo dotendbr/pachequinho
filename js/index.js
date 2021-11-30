@@ -1,6 +1,6 @@
 (() => { 
     const funcaoResize = ()=>{
-        const {innerWidth:largura,innerHeight:altura}=window; 
+        const {width:largura,height:altura}=screen; 
         const maior = largura > altura ? largura : altura 
         if(largura > altura){
             document.getElementById("player").style.width = `${maior}px`;   
