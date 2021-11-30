@@ -27,7 +27,7 @@ body{
 .header{
     
 }
-/* .container{
+.container{
     position: absolute;
     z-index: 999999;
     display: flex;
@@ -84,7 +84,7 @@ body{
     height: 100%;
     border:none;
     margin-top:0px;
-} */
+}
 
 .footer{
     justify-content: center;
