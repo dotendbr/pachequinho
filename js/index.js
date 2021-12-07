@@ -11,18 +11,18 @@
                 const {innerWidth:largura,innerHeight:altura} = window;
                 
                 if(largura <= 1000){
-                    elementIframe.style.height = `${altura}px`;
                     elementIframe.style.width = `${altura*1.777}px`;
-                    elementHeader.style.height = `${altura}px`;
-                    elementBlockVideo.style.height = `${altura}px`;
-                    elementContainer.style.height = `${altura}px`;
+                    elementIframe.style.height = `${altura}px`;
+                    elementHeader.style.height = elementIframe.style.height;
+                    elementBlockVideo.style.height = elementIframe.style.height;
+                    elementContainer.style.height = elementIframe.style.height;
                 }
                 else{
                     elementIframe.style.width = `${largura}px`;
                     elementIframe.style.height = `${largura*0.5625}px`;
-                    elementHeader.style.height = `${largura*0.5625}px`;
-                    elementBlockVideo.style.height = `${largura*0.5625}px`;
-                    elementContainer.style.height = `${altura}px`;
+                    elementHeader.style.height = elementIframe.style.height;
+                    elementBlockVideo.style.height = elementIframe.style.height;
+                    elementContainer.style.height = elementIframe.style.height;
                 }
             }, 1000);
         }
