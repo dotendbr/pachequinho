@@ -1,12 +1,12 @@
 @font-face{
     font-family:'Avenir';
-    src: url('/fonts/Metropolis-Light.otf') format('opentype');
+    src: url('/pachequinho/fonts/Metropolis-Light.otf') format('opentype');
     font-weight:normal;
     font-style:normal;
 }
 @font-face{
     font-family:'Punk';
-    src: url('/fonts/punkkid.ttf') format('truetype');
+    src: url('/pachequinho/fonts/punkkid.ttf') format('truetype');
     font-weight:normal;
     font-style:normal;
 }
@@ -24,11 +24,8 @@ body{
     font-family:'Avenir', times, serif, sans-serif;
     
 }
-.header{
-    
-}
 .container{
-    position: absolute;
+    position: relative;
     z-index: 999999;
     display: flex;
     flex-direction: column;
@@ -36,15 +33,14 @@ body{
     width: 100%;
 }
 
-.title{
+h1{
     margin-bottom: 120px;
     margin-top: 30px;
-}
-.title > h1{
     color: white;
     font-size: 3em;
     font-family: 'Punk', Times, serif;
     font-weight: normal;
+    text-shadow: 4px 2px 0 #000;
 }
 .boxHeader{
     border:2px solid rgb(255, 115, 0);
@@ -57,29 +53,36 @@ body{
     background-color:rgb(255, 115, 0)!important;
     color:white;
 }
-.container > div > a{
+
+.boxs > div{
+    text-align: center;
+}
+
+.boxs > div > a{
     padding: 26px;
     color:rgb(255, 115, 0);
     text-decoration: none;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
-.container > div > a:hover{
+.boxs > div > a:hover{
     color:white;
 }
 
 .embed{
-    position:relative;
+    position:absolute;
+    top:0px;
     width: 100%;
     padding-bottom:56.25%; 
+    display: flex;
+    justify-content: center;
 }
-.embed >div {
+.embed > #blockVideo {
     width: 100%;
-    height: 100vh;
     z-index: 9999;
     position:absolute;
 }
-.embed iframe {
-    position:absolute;
+.embed > iframe {
+    position: absolute;
     width: 100%;
     height: 100%;
     border:none;
