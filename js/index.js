@@ -29,6 +29,13 @@
     } 
     window.addEventListener("resize", resizeVideo());
     resizeVideo()();
+
+    document.addEventListener('DOMContentLoaded',function(){
+        const iframe = document.querySelector('#ifrmMain');
+        const player = new Vimeo.Player(iframe);
+
+        player.play();
+    });
 })()
 
 
