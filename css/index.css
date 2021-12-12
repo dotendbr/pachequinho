@@ -83,6 +83,9 @@ h1{
     width: 100%;
     z-index: 9999;
     position:absolute;
+    background-color: #000;
+    opacity: 1;
+    transition: opacity 10s;
 }
 .embed > iframe {
     position: absolute;
