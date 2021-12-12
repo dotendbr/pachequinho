@@ -1,32 +1,35 @@
-(() => { 
-
-    function onYouTubeIframeAPIReady() {
-        var player;
-        player = new YT.Player('muteYouTubeVideoPlayer', {
-            videoId: '3t6Z0qRftQ0', // YouTube Video ID
-            width: 560,               // Player width (in px)
-            height: 316,              // Player height (in px)
-            playerVars: {
-                autoplay: 1,        // Auto-play the video on load
-                controls: 0,        // Show pause/play buttons in player
-                showinfo: 0,        // Hide the video title
-                mute: 1,
-                modestbranding: 1,  // Hide the Youtube Logo
-                loop: 1,            // Run the video in a loop
-                fs: 0,              // Hide the full screen button
-                cc_load_policy: 0, // Hide closed captions
-                iv_load_policy: 3,  // Hide the Video Annotations
-                autohide: 0         // Hide video controls when playing
-            },
-            events: {
-                onReady: function(e) {
-                    e.target.mute();
-                    e.target.playVideo();
-                    document.querySelector("#blockVideo").style.opacity = 0;
-                }
+function onYouTubeIframeAPIReady() {
+    var player;
+    player = new YT.Player('video', {
+        // videoId: '3t6Z0qRftQ0', 
+        width: 560,               
+        height: 316,            
+        playerVars: {
+            listType:'playlist',
+            list: 'PLAEnSK9WS80IT67VpLxs-d4pIAeiLiBp5',
+            autoplay: 1,        
+            controls: 0,    
+            showinfo: 0,       
+            mute: 1,
+            modestbranding: 1, 
+            loop: 1,
+            fs: 0,
+            cc_load_policy: 0,
+            iv_load_policy: 3,
+            autohide: 0
+        },
+        events: {
+            onReady: function(e) {
+                e.target.mute();
+                e.target.playVideo();
+                document.querySelector("#blockVideo").style.opacity = 0;
             }
-        });
-    }
+        }
+    });
+}
+
+(() => { 
+    
     document.addEventListener('DOMContentLoaded',function(){
         const resizeVideo = ()=>{
             let timeout;

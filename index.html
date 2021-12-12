@@ -6,43 +6,14 @@
         <title>Seu Pachequinho</title>
         <script src="https://player.vimeo.com/api/player.js"></script>
         <script async src="https://www.youtube.com/iframe_api"></script>
-        <script>
-             function onYouTubeIframeAPIReady() {
-                var player;
-                player = new YT.Player('muteYouTubeVideoPlayer', {
-                    videoId: '3t6Z0qRftQ0', // YouTube Video ID
-                    width: 560,               // Player width (in px)
-                    height: 316,              // Player height (in px)
-                    playerVars: {
-                        autoplay: 1,        // Auto-play the video on load
-                        controls: 0,        // Show pause/play buttons in player
-                        showinfo: 0,        // Hide the video title
-                        mute: 1,
-                        modestbranding: 1,  // Hide the Youtube Logo
-                        loop: 1,            // Run the video in a loop
-                        fs: 0,              // Hide the full screen button
-                        cc_load_policy: 0, // Hide closed captions
-                        iv_load_policy: 3,  // Hide the Video Annotations
-                        autohide: 0         // Hide video controls when playing
-                    },
-                    events: {
-                        onReady: function(e) {
-                            e.target.mute();
-                            e.target.playVideo();
-                            document.querySelector("#blockVideo").style.opacity = 0;
-                        }
-                    }
-                });
-
-            }
-        </script>
+        <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/index.css"/>
     </head>
     <body> 
         <header>
             <div class="embed">
                 <div id="blockVideo"></div> 
-                <div id="muteYouTubeVideoPlayer"></div>
+                <div id="video"></div>
                 <!-- <iframe id="ifrmMain"  allow="autoplay; fullscreen" allowfullscreen src="https://player.vimeo.com/video/653519784?title=0&byline=0portrait=0&sidedock=0&controls=0&player_id=ifrmMain?autoplay=1&loop=1&autopause=0&muted=1&background=1&playsinline=1&byline=0&portrait=0&controls=0" width="640" height="360" frameborder="0"></iframe> -->
                 <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/q90-xHC3ItA?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             </div>
@@ -94,6 +65,5 @@
                 </div>
             </div>
         </footer>
-        <script src="js/index.js"></script>
 </body> 
 </html>
