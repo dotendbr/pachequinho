@@ -1,31 +1,37 @@
 function onYouTubeIframeAPIReady() {
-    var player;
-    player = new YT.Player('video', {
-        // videoId: '3t6Z0qRftQ0', 
-        width: 560,               
-        height: 316,            
-        playerVars: {
-            listType:'playlist',
-            list: 'PLAEnSK9WS80IT67VpLxs-d4pIAeiLiBp5',
-            autoplay: 1,        
-            controls: 0,    
-            showinfo: 0,       
-            mute: 1,
-            modestbranding: 1, 
-            loop: 1,
-            fs: 0,
-            cc_load_policy: 0,
-            iv_load_policy: 3,
-            autohide: 0
-        },
-        events: {
-            onReady: function(e) {
-                e.target.mute();
-                e.target.playVideo();
-                document.querySelector("#blockVideo").style.opacity = 0;
+    setTimeout(() => {
+        var player;
+        player = new YT.Player('video', {
+            // videoId: '3t6Z0qRftQ0', 
+            width: 560,               
+            height: 316,            
+            playerVars: {
+                listType:'playlist',
+                list: 'PLAEnSK9WS80IT67VpLxs-d4pIAeiLiBp5',
+                autoplay: 1,        
+                controls: 0,    
+                showinfo: 0,       
+                mute: 1,
+                modestbranding: 1, 
+                loop: 1,
+                fs: 0,
+                cc_load_policy: 0,
+                iv_load_policy: 3,
+                autohide: 0
+            },
+            events: {
+                onReady: function(e) {
+                    e.target.mute();
+                    e.target.playVideo();
+                    setTimeout(() => {
+                        document.querySelector("#blockVideo").style.opacity = 0;
+                        
+                    }, 4000);
+                }
             }
-        }
-    });
+        });
+    }, 1000)
+
 }
 
 (() => { 

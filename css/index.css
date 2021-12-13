@@ -35,13 +35,12 @@ body{
 }
 
 h1{
-    margin-bottom: 120px;
-    margin-top: 30px;
-    color: white;
+    margin-bottom: 90px;
+    margin-top: 60px;
+    color: rgb(255, 115, 0);
     font-size: 3em;
     font-family: 'Punk', Times, serif;
     font-weight: normal;
-    text-shadow: 4px 2px 0 #000;
 }
 .boxHeader{
     border:2px solid rgb(255, 115, 0);
@@ -83,9 +82,11 @@ h1{
     width: 100%;
     z-index: 9999;
     position:absolute;
-    background-color: #000;
+    background-image: url('../img/bgMovie.jpg') ;
+    background-size: cover;
+    background-position: center;
     opacity: 1;
-    transition: opacity 10s;
+    transition: opacity 2s;
 }
 .embed > iframe {
     position: absolute;
